@@ -35,7 +35,7 @@ for (let index = 0; index < pages; index++) {
 
 return (
         <>
-     <Clothes data={product}/>
+     {/* <Clothes data={product}/> */}
         <div className='allpro'>
      <div className='flex bg-gray-200 relative w-[300px] overflow-hidden m-auto mt-[20px] justify-center'>    
      <button className='absolute left-0 m-auto z-10 w-fit h-[100%] p-2 bg-gray-400 font-bold '  onClick={()=>settrans(trans+50)}>Next</button>    
