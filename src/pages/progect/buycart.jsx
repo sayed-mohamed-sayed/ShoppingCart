@@ -63,7 +63,7 @@ setfulldata(false)
     toast.success("sucess" ,{position:toast.POSITION.TOP_RIGHT})
     try {
       
-        await axios.post(`http://localhost:3000/api/adress` ,dataToSend);
+        await axios.post(`${process.env.URL}/api/adress` ,dataToSend);
       } catch (error) {
         console.log(error);
       }
@@ -75,7 +75,7 @@ setfulldata(false)
 
 async function delletpost(id){
   try {
-    await axios.delete(`http://localhost:3000/api/cart/${id}`)
+    await axios.delete(`${process.env.URL}/api/cart/${id}`)
     const delletedata=datadel.filter((i)=>i._id!==id)
     setdata(delletedata)
     toast.success("dellete item" ,{position:toast.POSITION.TOP_RIGHT})
@@ -108,7 +108,7 @@ const handleCheckout = async() => {
    }
   })
 
-  const {data} = await axios.post(`http://localhost:3000/api/checkout`, {lineItems})
+  const {data} = await axios.post(`${process.env.URL}/api/checkout`, {lineItems})
 
   const stripe = await stripePromise
 
@@ -196,8 +196,8 @@ return (
 export default Buycart;
 
 export async function getServerSideProps() {
-  const data= await axios.get("http://localhost:3000/api/cart/")
-  const dat= await axios.get("http://localhost:3000/api/adress/")
+  const data= await axios.get(`${process.env.URL}/api/cart/`)
+  const dat= await axios.get(`${process.env.URL}/api/adress/`)
 
 return {
 props:{

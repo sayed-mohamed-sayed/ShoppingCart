@@ -20,7 +20,7 @@ async function login(e) {
   })
   if (email==="sayed@gmail.com" ||password==="sayed12345"){
     
-    router.push("http://localhost:3000//dashpord")
+    router.push(`${process.env.URL}//dashpord`)
   }else{
 
     if (status.ok) router.push(status.url)

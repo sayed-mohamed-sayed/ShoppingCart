@@ -106,7 +106,7 @@ async function  AddCart(e){
   e.preventDefault()
 try {
   
-    await axios.post(`http://localhost:3000/api/data` ,io);
+    await axios.post(`${process.env.URL}/api/data` ,io);
   } catch (error) {
     console.log(error);
   }

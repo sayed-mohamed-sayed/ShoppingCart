@@ -18,7 +18,7 @@ lllllllllllllllllllllllllllllllllll
   
 export async function getServerSideProps() {
 
-    const repo= await axios.get("http://localhost:3000/api/data/")
+    const repo= await axios.get(`${process.env.URL}/api/data/`)
     
       return {
         props:{

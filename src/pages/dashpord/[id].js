@@ -25,7 +25,7 @@ const router=useRouter()
       img1,
     };                                                         
     try {
-      await axios.put(`http://localhost:3000/api/dataid/${datat._id}`, data);
+      await axios.put(`${process.env.URL}/api/dataid/${datat._id}`, data);
     } catch (error) {
       console.log(error);
     }
@@ -97,7 +97,7 @@ const router=useRouter()
 
 export async function getServerSideProps(context) {
   const updatedata = await axios.get(
-    `http://localhost:3000/api/dataid/${context.query.id}`,
+    `${process.env.URL}/api/dataid/${context.query.id}`,
     data
   );
   return {

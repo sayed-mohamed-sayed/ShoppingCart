@@ -9,7 +9,7 @@ export default function Dashpoard({datas}) {
 
 async function deletepost(id) {
   try {
-    await axios.delete(`http://localhost:3000/api/dataid/${id}`)
+    await axios.delete(`${process.env.URL}/api/dataid/${id}`)
     
     const dataf=data.filter((i)=>i._id!==id)
     setdata(dataf)
@@ -57,7 +57,7 @@ async function deletepost(id) {
 }
 
 export async function getStaticProps() {
-  const response= await axios.get("http://localhost:3000/api/data/")
+  const response= await axios.get(`${process.env.URL}/api/data/`)
 
   return{
     props:{

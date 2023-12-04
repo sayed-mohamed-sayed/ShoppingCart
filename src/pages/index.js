@@ -14,7 +14,7 @@ const router=useRouter()
 
   const signingoogle=(e)=>{
     e.preventDefault()
-    signIn('google' ,{callbackUrl:"http://localhost:3000"})
+    signIn('google' ,{callbackUrl:`${process.env.URL}`})
   }
 
 async function signcredintels(e){
@@ -34,10 +34,10 @@ const option={
 
 }
 
-await fetch ("http://localhost:3000/api/auth/signup" ,option)
+await fetch (`${process.env.URL}/api/auth/signup` ,option)
 .then((res)=>res.json())
 .then((data)=>{
-  if (data) router.push("http://localhost:3000/dashpord")
+  if (data) router.push(`${process.env.URL}/dashpord`)
 })
 }
 

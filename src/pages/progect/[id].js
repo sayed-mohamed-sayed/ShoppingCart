@@ -43,7 +43,7 @@ const addToCartHandler=(p)=>{
     toast.success("sucess" ,{position:toast.POSITION.TOP_RIGHT})
     try {
       
-        await axios.post(`http://localhost:3000/api/cart` ,dataToSend);
+        await axios.post(`${process.env.URL}/api/cart` ,dataToSend);
       } catch (error) {
         console.log(error);
       }
@@ -91,7 +91,7 @@ const addToCartHandler=(p)=>{
 
 export async function getServerSideProps(context) {
  
-const repo= await axios.get(`http://localhost:3000/api/dataid/${context.query.id}`)
+const repo= await axios.get(`${process.env.URL}/api/dataid/${context.query.id}`)
 
   return {
     props:{
