@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+/* 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.input{
+text-align: center;
+width: 100%;
+height: 70vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+
+
+.bodd{
+  background-color: rgba(0, 0, 0, 0.783);
+  color: #f25;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.crud{
+  width: 80%;
+  margin: auto;
+}
+.head{
+text-align: center;
+text-transform: uppercase;
+margin: 10px 0;
+
+}
+
+input{
+  width: 90%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: black;
+  margin: 5px;
+  border-radius: 4px;
+  padding: 4px;
+  color: white;
+text-align: center;
+}
+
+input:focus{
+  background-color: black;
+
+transform: scale(1.1);
+}
+
+.price input{
+  width: 21%;
+}
+
+#totall{
+  background-color: #f25;
+  padding: 5px 2px ;
+  border-radius: 4px;
+  color: white;
+
+}
+
+#totall::before{
+  content: "totall";
+}
+
+
+#submit{
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #310044;
+border-radius: 20px;
+color: white;
+font-weight: bold;
+}
+
+.btnsearch{
+  display: flex;
+  justify-content: space-between;
+}
+
+#searchtitle,#searchcat{
+  
+  width: 80%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #310044;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+
+#update,#delete{
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #310044;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+
+table{
+  max-height: 300px;
+  overflow-x:hidden;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+table th{
+  text-transform: uppercase;
+
+}
+
+th,td{
+  padding: 5px;
+}
+
+.lkj{
+  width: 100%;
+  height: 330px;
+  overflow-y: scroll;
+}
+
+
+#butendeleteall button{
+  width: 100%;
+  margin: 4px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: #310044;
+  color: white;
+  cursor: pointer;
+
+}
+
+
+.bn{
+  width: 100%;
+  height: 100vh;
+}
+
+.progress{
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  background: blue;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.progress span{
+  width: 300px;
+  height: 300px;
+  
+  margin: auto;
+  background:#310044;
+  align-items: center;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+.slider{
+  position: relative;
+  text-align: center;
+  
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.slider button{
+  width: 100px;
+  height: 50px;
+  position:relative;
+  margin: 0 100px 0 0 ;
+  cursor: pointer;
+}
+.slider .img{
+text-align: center;
+align-items: center;
+
+
+}
+
+.slider .img img{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  
+}
+
+
+
+
+
+
+
+
+.sliders{
+  position: relative;
+  text-align: center;
+  
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.sliders .imgs{
+text-align: center;
+align-items: center;
+
+
+}
+
+.sliders .imgs img{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  
+}
+
+
+
+
+
+
+
+.lk{
+  width: 100%;
+  height: 100vh;
+}
+
+.pp {
+  position: relative;
+  margin: 10px;
+  padding: 25px;
+  
+}
+
+.pp p{
+  background-color: darkgoldenrod;
+
+}
+
+.hg{
+  position: absolute;
+  right: 0;
+  margin: 0 5px;
+  background-color: lightslategrey;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+.fds{
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.loop{
+  width: 80%;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progressci{
+  position: relative;
+width: 250px;
+height: 250px;
+border-radius: 50%;
+background: conic-gradient(#880bea 0deg,#ededed 0deg);
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.progressci::after{
+content: "";
+width: 210px;
+height: 210px;
+position: absolute;
+border-radius: 50%;
+background: #fff;
+
+}
+
+.value{
+  font-size: 30px;
+  font-weight: 200;
+  color: #310044;
+  z-index: 9;
+} */
