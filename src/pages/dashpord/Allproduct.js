@@ -29,7 +29,7 @@ async function deletepost(id) {
           <h1>All Product</h1>
 <div className="flex flex-wrap justify-center">
           {
-            data.map((i)=>(
+            data&&data.map((i)=>(
 
           <div key={i._id} className="w-100% ">
             <div className=" m-2 bg-white p-2 w-[200px] h-[200px]">

@@ -32,13 +32,12 @@ const rout=(id)=>{
     router.push(`/progect/${id}`)
 }
 
-// const dataadres=data.filter((i)=>i.categroy===Clock)
 
 
-const proprice=filter==="low"?
-data.sort((a,b)=>a.price-b.price):
-filter==="high"?data.sort((a,b)=>b.price-a.price):
-data.sort((a,b)=>(a.title>b.tilte?1:-1))
+// const proprice=filter==="low"?
+// data.sort((a,b)=>a.price-b.price):
+// filter==="high"?data.sort((a,b)=>b.price-a.price):
+// data.sort((a,b)=>(a.title>b.tilte?1:-1))
 
 
 
